@@ -5,6 +5,8 @@ run-sca-job:
     stage: ScaScan
     image: maven:3.8.5-openjdk-17-slim
     script: |
+      echo "Running SCA Scan"
       SNYK_TOKEN='5d51e690-31d8-4d22-924b-7fc753ca211a'
       export SNYK_TOKEN
       mvn snyk:test -fn
+##
